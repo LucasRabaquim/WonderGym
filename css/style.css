@@ -1,0 +1,103 @@
+/* CSS Geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    transition: 0.2s;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Raleway";
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azul);
+}
+
+textarea {
+    resize: none;
+}
+
+.background-image{
+    position:absolute;
+    z-index: -1;
+}
+#background-home-imc{
+    right: 0;
+    translate:8em;
+    width:60%;
+    background-image: url("../Images/WallPaperBlob.svg");
+}
+#background-home-imc img{
+    width:100%;
+}
+
+
+nav ul {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    height: 10em;
+    align-items: center;
+    padding-top: 3em;
+    font-size: 1em;
+    justify-content: space-around;
+}
+
+#item-nav-logo img {
+    height: 6em
+}
+
+.item-nav-destaque {
+    padding: 0.7em;
+    border-radius: 5em;
+}
+
+.item-nav-destaque a {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+#item-nav-planos {
+    background-color: var(--vermelho);
+}
+
+#item-nav-login {
+    background-color: var(--amarelo);
+}
+
+#home-text{
+    width: 55%;
+    font-size: 3.7em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#home-text h1{
+    font-size: 6.5rem;
+    font-weight: 500;
+}
+.d-verm {
+    color: var(--vermelho);
+}
+
+.d-ama {
+    color: var(--amarelo);
+}
+
+.carrosel{
+    width: 63%;
+    margin-top: 5em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between
+}
+.carrosel img{
+    image-resolution: 16/9;
+    margin-right: 2em;
+    filter: opacity(0.2);
+    filter: opacity(0.6) drop-shadow(0 0 0 var(--vermelho));
+}

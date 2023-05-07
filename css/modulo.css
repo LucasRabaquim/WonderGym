@@ -1,0 +1,16 @@
+.flex-row{
+    display:flex;
+    flex-direction: row;
+}
+.flex-column{
+    display:flex;
+    flex-direction: column;
+}
+.inline-flex{display: inline-flex;}
+.w-100{width:100%;}
+.w-50{width: 50%;}
+:root {
+    --amarelo: #ffbd59;
+    --vermelho: #c40233;
+    --azul: #0d0628;
+}
