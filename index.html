@@ -16,12 +16,13 @@
     </div>
     <section id="#home">
         <nav>
-            <ul>
+            <ul class="flex row center">
                 <li id="item-nav-logo">
                     <img src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
                 </li>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#imc">Calculo IMC</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li class="item-nav-destaque" id="item-nav-planos"><a href="#planos">Nossos planos</a></li>
                 <li class="item-nav-destaque" id="item-nav-login"><a href="#login">Log in</a></li>
@@ -33,9 +34,63 @@
         </div>
 
         <div class="carrosel">
-            <img src="./Images/Placeholder.png" alt="">
-            <img src="./Images/Placeholder.png" alt="">
+            <div id="slide-area" class="flex row">
+                <div class="flex row">
+                    <img src="./Images/Placeholder.png" id="carrosel-img-01">
+                    <img src="./Images/Placeholder.png" id="carrosel-img-02">
+                </div>
+                <div class="flex row">
+                    <img src="./Images/Placeholder.png" id="carrosel-img-03">
+                    <img src="./Images/Placeholder.png" id="carrosel-img-04">
+                </div>
+            </div>
         </div>
+    </section>
+    <section id="#imc">
+        <div id="imc-text" class="d-ama">
+            Calcule o seu IMC para identificar o melhor plano à sua saúde!
+        </div>
+        <div id="form-imc" class="flex column center">
+            <div>
+                <h1>IMC
+                    <hr>
+                </h1>
+            </div>
+
+            <div><label for="inputAltura">Digite sua altura: </label><input type="number" name="altura" id="inputAltura"
+                    placeholder="168"></div>
+            <div><label for="inputPeso">Digite sua peso: </label><input type="number" name="peso" id="inputPeso"
+                    placeholder="60"></div>
+            <div>
+                <label for="">Sexo: </label>
+                <label for=""><input type="radio" name="rdSexo" id="rdFeminino"> Feminino</label>
+                <label for="rdMasculino"><input type="radio" name="rdSexo" id="rdMasculino">Masculino</label>
+
+            </div>
+            <div><input type="submit" value="Calcular" id="btnIMC"></div>
+        </div>
+    </section>
+    <section id="contato" class="flex column center">
+    <h1 id="equipe-text">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
+    <div class="flex row equipe-images">
+        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
+        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
+        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
+    </div>
+
+    <form id="form-contato" class="flex column" method="post">
+            <div id="titulo-contato">
+                <img src="./Images/Heroine/superGirl.png" alt="Imagem da Super-Girl">
+                <h1>Como podemos te <span class="d-ama">ajudar</span>?</h1>
+            </div>
+            <div><label for="inputNome">Nome: </label><input type="text" name="nome" id="inputNome"></div>
+            <div><label for="inputEmailContato">Email: </label><input type="email" name="emailContato" id="inputEmailContato"></div>
+            <div><label for="inputCelular">Celular: </label><input type="tel" name="celular" id="inputCelular"></div>
+            <h2>Deixe sua mensagem:</h2>
+            <textarea name="mensagem" id="txt-contato" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Enviar">
+    </form>
     </section>
 </body>
 

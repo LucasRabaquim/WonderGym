@@ -1,3 +1,34 @@
+const image01 = document.getElementById("carrosel-img-01");
+const image02 = document.getElementById("carrosel-img-02");
+const image03 = document.getElementById("carrosel-img-03");
+const image04 = document.getElementById("carrosel-img-04");
+
+image01.src = `../Images/carrosel/img1.jpg`;
+image02.src = `../Images/carrosel/img2.jpg`;
+image03.src = `../Images/carrosel/img3.jpg`;
+image04.src = `../Images/carrosel/img4.jpg`;
+
+
+const qtdImages = 9;
+let carroselActual = 1;
+
+
+
+/*
+setInterval(() => {
+    carroselActual = (carroselActual >= qtdImages) ? 1 : carroselActual+1;
+    image01.src = image02.src;
+    image02.src = `../Images/carrosel/img${carroselActual}.jpg`;
+  
+
+}, 20000);*/
+
+
+
+
+
+
+ 
 
 
 
@@ -22,25 +53,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-const form = document.querySelector('form');
 const btnImc = document.getElementById('btn_imc');
 btnImc.addEventListener("click",() => {
 
+
 })
-// Para não enviar o form, mas a verificação do HTML funcionar
-form.addEventListener("submit", (event) =>event.preventDefault());
+
 
 const btnBmr = document.getElementById("btn_bmr");
 
