@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+@font-face {
+    font-family: RaleWay;
+    src: url('/font/Raleway/Raleway-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Poppins;
+    src: url('/font/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('/font/Poppins/Poppins-Bold.ttf');
+}
+#Logo{
+    background-color: #FFF;
+    width:106px;
+    display:inline-flex;
+}
+#logo img{
+    
+    margin-top: 10px;
+    margin-left:10px;
+    
+}
+
+#titulo h2{
+    font-family: RaleWay;
+    color: #FFFFFF;
+    font-size:250%;
+    margin-top:3%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+   
+}
+#titulo h2 b{
+    color:#FFBD59;
+    padding-left:7px;
+    
+}
+
+/* Estilização do plano 1 - Arlequina */
+.plano1{
+    position: absolute;
+    width: 330px;
+    height: 550px;
+    left: 79px;
+    top: 150px;
+    bottom:50px;
+    background-color:white;
+    border-radius:40px;
+
+}
+.plano1 h2{
+    font-family: RaleWay;
+    color: #000;
+    font-size: 200%;
+    margin-top:5%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px rgb(81, 81, 81);
+}
+.plano1 h1{
+    font-family: Poppins-Bold;
+    color: #000;
+    font-size: 300%;
+    margin-top:4%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px rgb(81, 81, 81);
+}
+.plano1 h1 b{
+    color:#FFBD59;
+    padding-right:7px;
+}
+.plano1 hr{
+    position: absolute;
+    left: 25%;
+    right: 20.83%;
+    top: 27.41%;
+    bottom: 71.53%;
+    
+    background: #222222;
+    border-radius: 100px;
+}
+.plano1 #icone img{
+    display: flex ;
+    justify-content:center;
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.plano1 #conteudo img{
+   margin-left:40px;
+   float:left;
+   padding-right:10px;
+ 
+}
+.plano1 #conteudo p{
+    font-family: Raleway;
+    position:relative;
+    font-size:larger;
+    font-weight:bold;
+    padding-bottom:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.plano1 input{
+    width:150px;
+    height: 50px;
+    background-color:firebrick;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius:15px;
+    color:#FFF;
+    font-family:RaleWay;
+    font-weight:bold;
+    font-size:large;
+    border: none;
+}
+.plano1 input:hover{
+    color: #FFF;
+    background-color:#0D0628;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+/* Estilização do plano 2 - BatGirl */
+
+.plano2{
+    position: absolute;
+    width: 330px;
+    height: 550px;
+    right: 79px;
+    top: 150px;
+    background-color:white;
+    border-radius:40px;
+    float:right;
+}
+.plano2 h2{
+    font-family: RaleWay;
+    color: #000;
+    font-size: 200%;
+    margin-top:5%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px rgb(81, 81, 81);
+}
+.plano2 h1{
+    font-family: Poppins-Bold;
+    color: #000;
+    font-size: 300%;
+    margin-top:4%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px rgb(81, 81, 81);
+}
+.plano2 h1 b{
+    color:#FFBD59;
+    padding-right:7px;
+}
+.plano2 hr{
+    position: absolute;
+    left: 25%;
+    right: 20.83%;
+    top: 27.41%;
+    bottom: 71.53%;
+    
+    background: #222222;
+    border-radius: 100px;
+}
+.plano2 #icone img{
+    display: flex ;
+    justify-content:center;
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.plano2 #conteudo img{
+   margin-left:40px;
+   float:left;
+   padding-right:10px;
+ 
+}
+.plano2 #conteudo p{
+    font-family: Raleway;
+    position:relative;
+    font-size:larger;
+    font-weight:bold;
+    padding-bottom:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.plano2 input{
+    width:150px;
+    height: 50px;
+    background-color:firebrick;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius:15px;
+    color:#FFF;
+    font-family:RaleWay;
+    font-weight:bold;
+    font-size:large;
+    border: none;
+}
+.plano2 input:hover{
+    color: #FFF;
+    background-color:#0D0628;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+/* Estilização do plano 3 - Mulher Maravilha */
+
+.plano3{
+    position: relative;
+    width: 360px;
+    width: 330px;
+    height: 550px;
+    justify-content: center;
+    top: 30px;
+    padding-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#000;
+    border-radius:40px;
+}
+.plano3 h2{
+    font-family: RaleWay;
+    color: #FFBD59;
+    font-size: 200%;
+    margin-top:5%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px #FFBD59;
+}
+.plano3 h1{
+    font-family: Poppins-Bold;
+    color: #FFF;
+    font-size: 300%;
+    margin-top:4%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px rgb(81, 81, 81);
+}
+.plano3 h1 b{
+    color:#FFBD59;
+    padding-right:7px;
+}
+.plano3 hr{
+    position: absolute;
+    left: 25%;
+    right: 20.83%;
+    top: 27.41%;
+    bottom: 71.53%;
+    
+    background: #FFBD59;
+    border-radius: 100px;
+}
+.plano3 #icone img{
+    display: flex ;
+    justify-content:center;
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.plano3 #conteudo img{
+    margin-left:40px;
+    float:left;
+    padding-right:10px;
+  
+ }
+ .plano3 #conteudo p{
+    font-family: Raleway;
+    position:relative;
+    font-size:larger;
+    font-weight:bold;
+    padding-bottom:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #FFF;
+}
+.plano3 input{
+    width:150px;
+    height: 50px;
+    background-color:#FFBD59;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius:15px;
+    color:#000;
+    font-family:RaleWay;
+    font-weight:bold;
+    font-size:large;
+    border: none;
+}
+.plano3 input:hover{
+    color: #FFBD59;
+    background-color:rgb(17, 17, 17);
+    transition: 0.4s;
+    transform: scale(1.1);
+}
