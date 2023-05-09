@@ -153,25 +153,48 @@ nav ul {
     margin-bottom: 1em;
 }
 
-
-#form-imc {
+#form-imc{
+    position: relative;
     width: 50em;
     height: 30em;
     margin-left: 3em;
-    background-color: var(--preto);
     border-radius: 5em;
+}
+.div-side{
+    width: 100%;
+    height: 100%;
+    background-color: var(--preto);
     justify-content: space-around;
-
+    position: absolute;
+    transform:rotateY(0);
+    transition:1s;
+    z-index: 1;
+    scroll-snap-align: start;
 }
 
-#form-imc div {
+.div-side div{
     font-size: 2rem;
     display: flex;
+    background-color: var(--preto);
     justify-content: space-around;
     width: 80%;
 }
 
-#form-imc input {
+.input-error{
+    position: absolute;
+    opacity: 1;
+    font-size: 1.3rem !important;
+    padding: 1rem;
+    left:5em;
+    width: auto !important;
+    z-index: -1;
+    border-radius: 999em 999em 999em 0;
+    background-color: var(--amarelo);
+    color: var(--preto);
+    transition: 0.2s all;
+}
+
+.div-side input {
     background-color: var(--cinza);
     color: var(--preto);
     border-radius: 999em;
@@ -179,7 +202,7 @@ nav ul {
     border: none;
 }
 
-#form-imc input[type="submit"] {
+.div-side input[type="submit"] {
     background-color: var(--amarelo);
     width: 12em;
     height: 3em;
@@ -188,10 +211,15 @@ nav ul {
     
 }
 
-.input-error{
-    position: absolute;
+#front-side{
+   
+}
+#back-side{
     opacity: 0;
 }
+
+
+
 #equipe-titulo {
     margin-top: 5em;
     font-size: 3.5rem;

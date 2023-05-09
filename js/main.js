@@ -28,31 +28,36 @@ setInterval(() => {
 
 
 const btnImc = document.getElementById("btnIMC");
+    const peso = document.getElementById("inputPeso");
+    const altura = document.getElementById("inputAltura");
 
 btnImc.addEventListener("click", () => {
-    const peso = document.getElementById("inputPeso").value;
-    const altura = document.getElementById("InputAltura").value;
+    
     const rdFem = document.getElementById("rdFeminino").checked;
     const rdMas = document.getElementById("rdMasculino").checked;
-    if (rdFem || rdFem === null) {
-        showError();
-        return;
-    }
-    if (peso || altura == null) {
-        showError();
-        return;
-    }
+    /*if (peso.value === ("")) 
+        showError("input-peso-msg",peso);
+    if (altura.value === "") 
+        showError("input-altura-msg",altura);
+        if (!(rdFem || rdMas))
+        showError("input-sexo-msg",null);*/
+
+    const front = document.getElementById("front-side");
+    const back = document.getElementById("front-back");
+    back.style.transform = "180deg";
+    front.style.opacity = "0";
+    
+
     const correction = (rdFem) ? 0.85 : 0.9;
-    const imc = peso / Math.pow((altura / 100), 2).toFixed(2) * correction;
+    const imc = peso.value / Math.pow((altura.value / 100), 2).toFixed(2) * correction;
     const msg = [
         'com obesidade grau I',
         'acima do peso',
         'no peso ideal',
         'abaixo do peso',
-        'muito abaixo do peso',
-        'com o peso gravemente baixo'
+        'muito abaixo do peso'
     ]
-    const valores = [99999, 30, 25, 18.5, 17, 16];
+    const valores = [99999, 30, 25, 18.5, 17];
     let imc_msg;
     valores.forEach((item, index) => {
         if (imc < item) 
@@ -60,6 +65,12 @@ btnImc.addEventListener("click", () => {
     });
 
 })
+const showError = (element,input) => {
+    const msg = document.getElementById(element);
+    msg.style.left="42em";
+    setInterval(() => {msg.style.left="5em"},2000);
+    input.addEventListener("focus", () =>input.style.border ="none");
+};
 
 
 
@@ -79,40 +90,3 @@ btnImc.addEventListener("click", () => {
 
 
 
-
-
-const btnBmr = document.getElementById("btn_bmr");
-
-btnBmr.addEventListener("click", () => {
-    const feminino = document.getElementById("inputSexoFeminino").checked;
-    const masculino = document.getElementById("inputSexoMasculino").checked;
-    if (!(feminino || masculino))
-        return;
-    const peso = document.getElementById('inputPeso').value;
-    const altura = document.getElementById('inputAltura').value;
-    const idade = document.getElementById('inputIdade').value;
-    const textResultado = document.getElementById("resultadoBMR");
-    const resultado = (feminino) ?
-        447.593 + (9.247 * peso) + (3.098 * altura) - (4.33 * idade)
-        :
-        88.362 + (13.397 * peso) + (4.799 * peso) - (5.677 * idade);
-    textResultado.value = resultado;
-});
-
-function calcularBMR() {
-    alert();
-    const feminino = document.querySelector("#inputSexoFeminino").checked;
-    const masculino = document.querySelector("#inputSexoFeminino").checked;
-    /*    if(!(feminino || masculino))
-            return;*/
-
-    const peso = document.querySelector('#inputPeso').value;
-    const altura = document.querySelector('#inputAltura').value;
-    const idade = document.querySelector('#inputIdade').value;
-    const textResultado = document.querySelector("#resultadoBMR");
-    const resultado = (feminino) ?
-        447.593 + (9.247 * peso) + (3.098 * altura) - (4.33 * idade)
-        :
-        88.362 + (13.397 * peso) + (4.799 * peso) - (5.677 * idade);
-    textResultado.value = resultado;
-}
