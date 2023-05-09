@@ -58,9 +58,9 @@
             </div>
 
             <div><label for="inputAltura">Digite sua altura: </label><input type="number" name="altura" id="inputAltura"
-                    placeholder="168"></div>
+                    placeholder="168"><div class="input-error">A altura não pode estar vazia</div></div>
             <div><label for="inputPeso">Digite sua peso: </label><input type="number" name="peso" id="inputPeso"
-                    placeholder="60"></div>
+                    placeholder="60"><div class="input-error">O Peso não pode estar vazio</div></div>
             <div>
                 <label for="">Sexo: </label>
                 <label for=""><input type="radio" name="rdSexo" id="rdFeminino"> Feminino</label>
@@ -71,25 +71,28 @@
         </div>
     </section>
     <section id="contato" class="flex column center">
-    <h1 id="equipe-text">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
+    <h1 id="equipe-titulo">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
     <div class="flex row equipe-images">
-        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
-        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
-        <div><img src="./Images/equipe/Lucas.png" alt=""> <a href="https://www.linkedin.com/in/lucas-rabaquim/">Lucas</a></div>
+        <div><img src="./Images/equipe/Ale.png" alt=""></div>
+        <div><img src="./Images/equipe/Laur.png" alt=""></div>
+        <div><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img src="./Images/equipe/Lucas.png" alt=""></a><br>Lucas</div>
     </div>
 
-    <form id="form-contato" class="flex column" method="post">
+    <form id="form-contato" class="flex column" action="./index.html" method="get">
             <div id="titulo-contato">
                 <img src="./Images/Heroine/superGirl.png" alt="Imagem da Super-Girl">
                 <h1>Como podemos te <span class="d-ama">ajudar</span>?</h1>
             </div>
-            <div><label for="inputNome">Nome: </label><input type="text" name="nome" id="inputNome"></div>
-            <div><label for="inputEmailContato">Email: </label><input type="email" name="emailContato" id="inputEmailContato"></div>
-            <div><label for="inputCelular">Celular: </label><input type="tel" name="celular" id="inputCelular"></div>
-            <h2>Deixe sua mensagem:</h2>
-            <textarea name="mensagem" id="txt-contato" cols="30" rows="10"></textarea>
 
-            <input type="submit" value="Enviar">
+            <div class="form-input"><label for="inputNome">Nome: </label><input type="text" name="nome" id="inputNome" required="required"></div>
+            <div class="form-input"><label for="inputEmailContato">Email: </label><input type="email" name="emailContato" id="inputEmailContato" required="required"></div>
+            <div class="form-input"><label for="inputCelular">Celular: </label><input type="tel" name="celular" id="inputCelular" required="required"></div>
+            
+            <div id="msg-area">
+                <h2>Deixe sua mensagem:</h2>
+                <textarea name="mensagem" id="txt-contato" cols="30" rows="10" required="required"></textarea>
+            </div>
+            <input id="contato-submit" class="form-enviar" type="submit" value="Enviar">
     </form>
     </section>
 </body>

@@ -16,13 +16,11 @@ body {
     background-color: var(--azul);
     height: 2500vh;
 }
-
+input[type="submit"],input[type="radio"]{
+    cursor:pointer;
+}
 section {
     width: 100vw;
-}
-
-textarea {
-    resize: none;
 }
 
 input:focus {
@@ -187,19 +185,24 @@ nav ul {
     height: 3em;
     font-size: 0.6em;
     font-weight: bold;
+    
 }
 
-#equipe-text {
+.input-error{
+    position: absolute;
+    opacity: 0;
+}
+#equipe-titulo {
     margin-top: 5em;
-    font-size: 2rem;
+    font-size: 3.5rem;
     margin-bottom: 2em;
 }
 
 .equipe-images {
     width: 100%;
+    font-size: 2rem;
     justify-content: space-around;
 }
-
 .equipe-images div {
     display: flex;
     flex-direction: column;
@@ -213,25 +216,60 @@ nav ul {
 #form-contato {
     margin-top: 13em;
     width: 100%;
-    height: 200vh;
+    height: auto;
     background-color: var(--vermelho);
     border-radius: 5em;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-#form-contato div {
-    display: flex;
-    flex-direction: row;
+#titulo-contato{
+    margin: 5em 0 13em 0;
 }
 
 #titulo-contato h1{
     font-size: 4rem;
-    width: auto;
-    float: right;
+    margin-left: 5em;
 }
 #titulo-contato img {
     position: absolute;
     left: 0px;
     translate: 1em -16em;
+}
+
+
+.form-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+.form-input input{
+    width:50%;
+    color:var(--preto);
+}
+#msg-area{
+    text-align: center;
+    width:100%;
+}
+#msg-area h2{font-size: 2rem;margin-bottom: 1rem;}
+#msg-area textarea{
+    resize: none;
+    width:35%;
+    color:var(--preto);
+}
+
+.form-enviar{
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 99em;
+    border-style: none;
+}
+
+#contato-submit{
+    background-color: var(--preto);
+    width: 20%;
+    margin:3rem 0 2rem 0;
 }

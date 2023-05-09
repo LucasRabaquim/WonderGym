@@ -27,45 +27,66 @@ setInterval(() => {
 
 
 
+const btnImc = document.getElementById("btnIMC");
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const btnImc = document.getElementById('btn_imc');
-btnImc.addEventListener("click",() => {
-
+btnImc.addEventListener("click", () => {
+    const peso = document.getElementById("inputPeso").value;
+    const altura = document.getElementById("InputAltura").value;
+    const rdFem = document.getElementById("rdFeminino").checked;
+    const rdMas = document.getElementById("rdMasculino").checked;
+    if (rdFem || rdFem === null) {
+        showError();
+        return;
+    }
+    if (peso || altura == null) {
+        showError();
+        return;
+    }
+    const correction = (rdFem) ? 0.85 : 0.9;
+    const imc = peso / Math.pow((altura / 100), 2).toFixed(2) * correction;
+    const msg = [
+        'com obesidade grau I',
+        'acima do peso',
+        'no peso ideal',
+        'abaixo do peso',
+        'muito abaixo do peso',
+        'com o peso gravemente baixo'
+    ]
+    const valores = [99999, 30, 25, 18.5, 17, 16];
+    let imc_msg;
+    valores.forEach((item, index) => {
+        if (imc < item) 
+            imc_msg = msg[index];
+    });
 
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const btnBmr = document.getElementById("btn_bmr");
 
-btnBmr.addEventListener("click",() => {
+btnBmr.addEventListener("click", () => {
     const feminino = document.getElementById("inputSexoFeminino").checked;
     const masculino = document.getElementById("inputSexoMasculino").checked;
-    if(!(feminino || masculino))
+    if (!(feminino || masculino))
         return;
     const peso = document.getElementById('inputPeso').value;
     const altura = document.getElementById('inputAltura').value;
@@ -78,12 +99,12 @@ btnBmr.addEventListener("click",() => {
     textResultado.value = resultado;
 });
 
-function calcularBMR(){
+function calcularBMR() {
     alert();
     const feminino = document.querySelector("#inputSexoFeminino").checked;
     const masculino = document.querySelector("#inputSexoFeminino").checked;
-/*    if(!(feminino || masculino))
-        return;*/
+    /*    if(!(feminino || masculino))
+            return;*/
 
     const peso = document.querySelector('#inputPeso').value;
     const altura = document.querySelector('#inputAltura').value;
@@ -93,5 +114,5 @@ function calcularBMR(){
         447.593 + (9.247 * peso) + (3.098 * altura) - (4.33 * idade)
         :
         88.362 + (13.397 * peso) + (4.799 * peso) - (5.677 * idade);
-    textResultado.value =resultado;
+    textResultado.value = resultado;
 }
