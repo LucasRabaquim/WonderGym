@@ -6,8 +6,8 @@
 .column{
     flex-direction: column;
 }
-.column-reverse{
-    flex-direction: column-reverse;
+.text-center{
+    text-align: center;
 }
 .center{
     align-items: center;

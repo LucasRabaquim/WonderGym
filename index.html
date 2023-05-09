@@ -51,46 +51,51 @@
             Calcule o seu IMC para identificar o melhor plano à sua saúde!
         </div>
         <div id="form-imc">
-            <div class="flex column center div-side" id="back-side">
-                ola
+            <div id="form-calc" class="flex column center">
+                <div>
+                    <h1 class="text-center">IMC
+                        <hr/>
+                    </h1>
+                </div>
+                <div>
+                    <label for="inputAltura">Digite sua altura: </label>
+                    <input type="number" name="altura" id="inputAltura" placeholder="168" />
+                    <div class="input-error" id="input-altura-msg">A altura não pode estar vazia</div>
+                </div>
+                <div>
+                    <label for="inputPeso">Digite sua peso: </label>
+                    <input type="number" name="peso" id="inputPeso" placeholder="60" />
+                    <div class="input-error" id="input-peso-msg">O Peso não pode estar vazio</div>
+                </div>
+                <div>
+                    <label for="">Sexo: </label>
+                    <label for="rdFeminino">
+                        <input type="radio" name="rdSexo" id="rdFeminino">
+                        Feminino</label>
+                    <label for="rdMasculino">
+                        <input type="radio" name="rdSexo" id="rdMasculino">
+                        Masculino</label>
+                    <div class="input-error" id="input-sexo-msg">Selecione algum sexo</div>
+                </div>
+                <div><input type="submit" value="Calcular" id="btnIMC"></div>
             </div>
-            <div class="flex column center div-side" id="front-side">
-            <div>
-                <h1>IMC
-                    <hr>
-                </h1>
+            <div id="form-result"class="flex column center">
+                <div><h1 id="result-imc"></h1></div>
+                    <div><p id="result-message"></p></div>
+                        <div><a href="#planos" id="result-plans"> </a></div>
+                            <div><input id="btn-return" type="submit" value="Voltar"></div>
             </div>
-            <div>
-                <label for="inputAltura">Digite sua altura: </label>
-                <input type="number" name="altura" id="inputAltura" placeholder="168" />
-                <div class="input-error" id="input-altura-msg">A altura não pode estar vazia</div>
-            </div>
-            <div>
-                <label for="inputPeso">Digite sua peso: </label>
-                <input type="number" name="peso" id="inputPeso" placeholder="60" />
-                <div class="input-error" id="input-peso-msg">O Peso não pode estar vazio</div>
-            </div>
-            <div>
-                <label for="">Sexo: </label>
-                <label for="rdFeminino">
-                    <input type="radio" name="rdSexo" id="rdFeminino">
-                    Feminino</label>
-                <label for="rdMasculino">
-                    <input type="radio" name="rdSexo" id="rdMasculino">
-                    Masculino</label>
-                <div class="input-error" id="input-sexo-msg">Selecione algum sexo</div>
-            </div>
-            <div><input type="submit" value="Calcular" id="btnIMC"></div>
         </div>
-        
     </section>
+
+
+
     <section id="contato" class="flex column center">
         <h1 id="equipe-titulo">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
         <div class="flex row equipe-images">
-            <div><img src="./Images/equipe/Ale.png" alt=""></div>
-            <div><img src="./Images/equipe/Laur.png" alt=""></div>
-            <div><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img src="./Images/equipe/Lucas.png"
-                        alt=""></a><br>Lucas</div>
+            <div><a href=""></a><img src="./Images/equipe/Ale.png" alt=""></a><br>Alexandre</div>
+            <div><a href=""></a><img src="./Images/equipe/Laur.png" alt=""></a><br>Gustavo</div>
+            <div><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img src="./Images/equipe/Lucas.png"alt=""></a><br>Lucas</div>
         </div>
 
         <form id="form-contato" class="flex column" action="./index.html" method="get">
@@ -100,8 +105,7 @@
             </div>
 
             <div class="form-input"><label for="inputNome">Nome: </label><input type="text" name="nome" id="inputNome"
-                    required="required">
-                </div>
+                    required="required"></div>
             <div class="form-input"><label for="inputEmailContato">Email: </label><input type="email"
                     name="emailContato" id="inputEmailContato" required="required"></div>
             <div class="form-input"><label for="inputCelular">Celular: </label><input type="tel" name="celular"

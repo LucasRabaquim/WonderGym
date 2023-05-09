@@ -8,6 +8,7 @@
     text-decoration: none;
     font-family: "Raleway";
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,9 +17,12 @@ body {
     background-color: var(--azul);
     height: 2500vh;
 }
-input[type="submit"],input[type="radio"]{
-    cursor:pointer;
+
+input[type="submit"],
+input[type="radio"] {
+    cursor: pointer;
 }
+
 section {
     width: 100vw;
 }
@@ -120,31 +124,6 @@ nav ul {
     margin: 0 1em 0 1em;
 }
 
-
-@keyframes shadow-pop-tr {
-    0% {
-        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-        transform: translateX(0) translateY(0);
-    }
-
-    100% {
-        box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-        transform: translateX(-8px) translateY(8px);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 #imc-text {
     width: 43%;
     font-size: 2.3em;
@@ -153,39 +132,49 @@ nav ul {
     margin-bottom: 1em;
 }
 
-#form-imc{
-    position: relative;
+#form-imc {
+    margin-left: 3em;
+    overflow-y: hidden;
+    scroll-snap-type: smooth;
+}
+
+#form-imc,
+#form-calc,
+#form-result {
     width: 50em;
     height: 30em;
-    margin-left: 3em;
+    background-color: var(--preto);
     border-radius: 5em;
+    justify-content: space-around;
+
 }
-.div-side{
+
+#form-calc,
+#form-result {
     width: 100%;
     height: 100%;
-    background-color: var(--preto);
-    justify-content: space-around;
-    position: absolute;
-    transform:rotateY(0);
-    transition:1s;
-    z-index: 1;
     scroll-snap-align: start;
 }
 
-.div-side div{
+#form-calc div {
     font-size: 2rem;
     display: flex;
-    background-color: var(--preto);
     justify-content: space-around;
     width: 80%;
 }
-
-.input-error{
+#form-calc hr{
+    background-color: var(--amarelo);
+    width:25rem;;
+    height: 0.5rem;
+    border-radius: 999rem;
+    border-style: none;
+}
+.input-error {
     position: absolute;
     opacity: 1;
     font-size: 1.3rem !important;
     padding: 1rem;
-    left:5em;
+    left: 5em;
     width: auto !important;
     z-index: -1;
     border-radius: 999em 999em 999em 0;
@@ -194,7 +183,10 @@ nav ul {
     transition: 0.2s all;
 }
 
-.div-side input {
+
+
+#form-calc input,
+#form-imc input {
     background-color: var(--cinza);
     color: var(--preto);
     border-radius: 999em;
@@ -202,20 +194,19 @@ nav ul {
     border: none;
 }
 
-.div-side input[type="submit"] {
+#form-imc input[type="submit"] {
     background-color: var(--amarelo);
+    color: #fff;
     width: 12em;
     height: 3em;
     font-size: 0.6em;
     font-weight: bold;
-    
+
 }
 
-#front-side{
-   
-}
-#back-side{
-    opacity: 0;
+#form-result {
+    font-size: 1.5rem;
+    
 }
 
 
@@ -231,6 +222,7 @@ nav ul {
     font-size: 2rem;
     justify-content: space-around;
 }
+
 .equipe-images div {
     display: flex;
     flex-direction: column;
@@ -250,14 +242,15 @@ nav ul {
     align-items: center;
 }
 
-#titulo-contato{
+#titulo-contato {
     margin: 5em 0 13em 0;
 }
 
-#titulo-contato h1{
+#titulo-contato h1 {
     font-size: 4rem;
     margin-left: 5em;
 }
+
 #titulo-contato img {
     position: absolute;
     left: 0px;
@@ -265,7 +258,7 @@ nav ul {
 }
 
 
-.form-input{
+.form-input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -273,22 +266,29 @@ nav ul {
     width: 50%;
     margin-bottom: 3rem;
 }
-.form-input input{
-    width:50%;
-    color:var(--preto);
-}
-#msg-area{
-    text-align: center;
-    width:100%;
-}
-#msg-area h2{font-size: 2rem;margin-bottom: 1rem;}
-#msg-area textarea{
-    resize: none;
-    width:35%;
-    color:var(--preto);
+
+.form-input input {
+    width: 50%;
+    color: var(--preto);
 }
 
-.form-enviar{
+#msg-area {
+    text-align: center;
+    width: 100%;
+}
+
+#msg-area h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#msg-area textarea {
+    resize: none;
+    width: 35%;
+    color: var(--preto);
+}
+
+.form-enviar {
     width: 10rem;
     height: 5rem;
     font-size: 2rem;
@@ -296,8 +296,8 @@ nav ul {
     border-style: none;
 }
 
-#contato-submit{
+#contato-submit {
     background-color: var(--preto);
     width: 20%;
-    margin:3rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
 }

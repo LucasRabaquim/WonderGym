@@ -28,26 +28,21 @@ setInterval(() => {
 
 
 const btnImc = document.getElementById("btnIMC");
-    const peso = document.getElementById("inputPeso");
-    const altura = document.getElementById("inputAltura");
 
 btnImc.addEventListener("click", () => {
-    
+
+
+    const peso = document.getElementById("inputPeso");
+    const altura = document.getElementById("inputAltura");
+    const rdSexo = document.getElementsByName("rdSexo");
     const rdFem = document.getElementById("rdFeminino").checked;
     const rdMas = document.getElementById("rdMasculino").checked;
-    /*if (peso.value === ("")) 
-        showError("input-peso-msg",peso);
-    if (altura.value === "") 
-        showError("input-altura-msg",altura);
-        if (!(rdFem || rdMas))
-        showError("input-sexo-msg",null);*/
-
-    const front = document.getElementById("front-side");
-    const back = document.getElementById("front-back");
-    back.style.transform = "180deg";
-    front.style.opacity = "0";
-    
-
+    if (peso.value === (""))
+        showError("input-peso-msg", peso);
+    if (altura.value === "")
+        showError("input-altura-msg", altura);
+    if (!(rdFem || rdMas))
+        showError("input-sexo-msg", null);
     const correction = (rdFem) ? 0.85 : 0.9;
     const imc = peso.value / Math.pow((altura.value / 100), 2).toFixed(2) * correction;
     const msg = [
@@ -57,23 +52,49 @@ btnImc.addEventListener("click", () => {
         'abaixo do peso',
         'muito abaixo do peso'
     ]
+    const planos = [
+        1, 2, 3, 4, 5
+    ];
     const valores = [99999, 30, 25, 18.5, 17];
     let imc_msg;
     valores.forEach((item, index) => {
-        if (imc < item) 
+        if (imc < item) {
             imc_msg = msg[index];
+            imc_plano = planos[index];
+        }
     });
+    window.scrollBy(0,1);
+    const resultForm = document.getElementById("form-result");
+    resultForm.scrollIntoView({ behavior: "smooth" });
+
+    const resultTitle = document.getElementById("result-imc");
+    resultTitle.textContent = `Seu IMC é de: ${imc}`;
+    const resultMessage = document.getElementById("result-message");
+    resultMessage.textContent = `Você está ${imc_msg}.\n O plano ideal é o ${imc_plano}`;
+    const resultPlan = document.getElementById("result-plans");
+    resultPlan.textContent = `Assine agora o plano ${imc_plano}`;
+
 
 })
-const showError = (element,input) => {
+
+const showError = (element, input) => {
     const msg = document.getElementById(element);
-    msg.style.left="42em";
-    setInterval(() => {msg.style.left="5em"},2000);
-    input.addEventListener("focus", () =>input.style.border ="none");
+
+    msg.style.left = "42em";
+    setInterval(() => { msg.style.left = "5em" }, 3000);
+    input.style.border = "solid var(--vermelho) 0.18rem";
+
+    input.addEventListener("focus", () => input.style.border = "none");
 };
 
 
+const btnReturn = document.getElementById("btn-return");
 
+btnReturn.addEventListener("click", () => {
+    window.scrollBy(0,1);
+    const calcForm = document.getElementById("form-calc");
+    calcForm.scrollIntoView({ behavior: "smooth" });
+});
 
 
 
