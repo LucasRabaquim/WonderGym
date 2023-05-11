@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
     <title>Wonder Gym</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/planos.css" />
     <link rel="stylesheet" href="./css/modulo.css" />
 </head>
 
@@ -54,17 +55,17 @@
             <div id="form-calc" class="flex column center">
                 <div>
                     <h1 class="text-center">IMC
-                        <hr/>
+                        <hr />
                     </h1>
                 </div>
                 <div>
                     <label for="inputAltura">Digite sua altura: </label>
-                    <input type="number" name="altura" id="inputAltura" placeholder="168" />
+                    <input type="number" name="altura" id="inputAltura" placeholder="168" min="0" />
                     <div class="input-error" id="input-altura-msg">A altura não pode estar vazia</div>
                 </div>
                 <div>
                     <label for="inputPeso">Digite sua peso: </label>
-                    <input type="number" name="peso" id="inputPeso" placeholder="60" />
+                    <input type="number" name="peso" id="inputPeso" placeholder="60" min="0" />
                     <div class="input-error" id="input-peso-msg">O Peso não pode estar vazio</div>
                 </div>
                 <div>
@@ -79,23 +80,118 @@
                 </div>
                 <div><input type="submit" value="Calcular" id="btnIMC"></div>
             </div>
-            <div id="form-result"class="flex column center">
-                <div><h1 id="result-imc"></h1></div>
-                    <div><p id="result-message"></p></div>
-                        <div><a href="#planos" id="result-plans"> </a></div>
-                            <div><input id="btn-return" type="submit" value="Voltar"></div>
+            <div id="form-result" class="flex column center">
+                <div>
+                    <h1 id="result-imc"></h1>
+                </div>
+                <div>
+                    <p id="result-message"></p>
+                </div>
+                <div><a href="#planos" id="result-plans"> </a></div>
+                <div><input id="btn-return" type="submit" value="Voltar"></div>
             </div>
         </div>
     </section>
 
 
+    <section id="planos flex column">
+        <div id="titulo">
+            <h2>Conheça nossos  <b class="d-ama">Planos</b></h2>
+        </div>
+
+        <div class="container div-planos flex row center w-100">
+            <div class="plano">
+                <h2>Plano Arlequina</h2>
+                <h1><b class="d-ama">R$</b> 69,99</h1>
+                <hr>
+                <div id="icone">
+                    <img src="./Images/planos/Arlequina- Icone.png">
+                </div>
+                <div class="conteudo-planos">
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Personal Trainer</p>
+                    </div>
+                    <div> 
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Nutricionista</p>
+                    </div>
+                    <div> 
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Acesso total à instalação da sua região</p>
+                    </div>
+                </div>
+                <br>
+                <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
+
+            </div>
+
+            <div class="plano" id="plano-maravilha">
+                <h2>Plano Maravilha</h2>
+                <h1><b class="d-ama">R$</b> 89,99</h1>
+                <hr>
+                <div id="icone">
+                    <img src="./Images/planos/MulherMaravilha - Icone.png">
+                </div>
+
+                <div class="conteudo-planos">
+                    <div> 
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Personal Trainer</p>
+                    </div>
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Nutricionista</p>
+                    </div>
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Acesso à qualquer WonderGym</p>
+                    </div>
+                </div>
+                <br>
+                <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
+
+            </div>
+
+            <div class="plano">
+                <h2>Plano BatGirl</h2>
+                <h1><b class="d-ama">R$</b> 39,99</h1>
+                <hr>
+                <div id="icone">
+                    <img src="./Images/planos/BatGirl - Icone.png">
+                </div>
+
+                <div class="conteudo-planos">
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Ficha de Treino</p>
+                    </div>
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Nutricionista</p>
+                    </div>
+                    <div>
+                        <img src="./Images/planos/Ellipse 1.png">
+                        <p>Acesso restrito à instalação</p>
+                    </div>
+                </div>
+                <br>
+                <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
+
+            </div>
+
+
+        </div>
+    </section>
+
 
     <section id="contato" class="flex column center">
         <h1 id="equipe-titulo">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
-        <div class="flex row equipe-images">
+        <div class="flex row equipe-Images">
             <div><a href=""></a><img src="./Images/equipe/Ale.png" alt=""></a><br>Alexandre</div>
             <div><a href=""></a><img src="./Images/equipe/Laur.png" alt=""></a><br>Gustavo</div>
-            <div><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img src="./Images/equipe/Lucas.png"alt=""></a><br>Lucas</div>
+            <div><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img src="./Images/equipe/Lucas.png"
+                        alt=""></a><br>Lucas</div>
         </div>
 
         <form id="form-contato" class="flex column" action="./index.html" method="get">

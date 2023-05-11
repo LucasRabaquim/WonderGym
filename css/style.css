@@ -25,6 +25,7 @@ input[type="radio"] {
 
 section {
     width: 100vw;
+   
 }
 
 input:focus {
@@ -122,6 +123,7 @@ nav ul {
 #slide-area div img {
     width: 50%;
     margin: 0 1em 0 1em;
+    border-radius:1em;
 }
 
 #imc-text {
@@ -301,3 +303,28 @@ nav ul {
     width: 20%;
     margin: 3rem 0 2rem 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
