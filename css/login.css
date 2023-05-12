@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: RaleWay;
+    src: url('/font/Raleway/Raleway-VariableFont_wght.ttf');
+}
+#login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height:40em;
+    background-image: url("../Images/Heroine/login.png");
+    background-size: cover;
+}
+
+#moldura{
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+background: rgba(34, 34, 34, 0.904);
+border-radius:20px;
+width: 80%;
+height:80%;
+}
+
+#moldura h1{
+    font-family:RaleWay;
+    text-align:center;
+    margin-top:2%;
+    font-size:60px;
+    color:#FFF;
+}
+
+#moldura hr{
+    width: 60%;
+background: #FFBD59;
+border-radius: 100px;
+padding-bottom: 3px;
+}
+
+.Formulario form label{
+    font-size: 2rem;
+    display:flex;
+    justify-content: center;
+    color:#FFF;
+    font-family:RaleWay;
+    font-size:30px;
+   
+}
+.Formulario form input{
+    background:none;
+    border: 1px solid #FFF;
+    border-radius:5px;
+    font-size: 2rem;
+    color: #FFF;
+}
+.Formulario form p{
+    font-size: 20px;
+}
+#botao input{
+    display:flex;
+    justify-content: center;
+   
+    width:7em;
+    height:3em;
+    font-family:RaleWay;
+    font-size: 20px;
+    background-color:#FFBD59;
+    border-radius:5px;
+    font-weight: bolder;
+    color:#FFF;
+}
+
+#botao input:hover{
+    background-color: #FFF;
+    color:#FFBD59;
+    transition:0.4s;
+}
+
+
+footer{
+    width: 100%;
+    height: 8em;
+    bottom:0px;
+    background: #111111;
+    overflow:hidden;
+    
+}
+    
+footer p{
+    font-family:RaleWay;
+    font-size: 35px;
+    color:#FFF;
+    padding-top:50px;
+    display:inline-block;
+    margin-left:8em;
+    
+}
+
+footer img{
+    float:right;
+    height: 100%;
+    width: auto;
+    margin-top:1em;
+    margin-right:2em;  
+    text-align:center; 
+}
+
+@media screen and (max-width: 900px){
+
+        #botao input{
+            margin-left:41%;
+ 
+        }
+        #rodape{
+            margin-top:65.7%;
+        }
+        #rodape p{
+            font-family:RaleWay;
+            font-size: 20px;
+            color:#FFF;
+            padding-top:50px;
+            display:inline-block;
+        }
+}
+
+@media screen and (max-width: 480px){
+    #botao input{
+        margin-left:25%;
+
+    }
+    #rodape{
+        margin-top:130%;
+    }
+    #rodape p{
+        font-family:RaleWay;
+        font-size: 15px;
+        color:#FFF;
+        padding-top:50px;
+        display:inline-block;
+        margin-left:2%;
+    }
+    #rodape img{
+        display:flex;
+        justify-content: center;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:1em;  
+    }
+    .Formulario form label{
+    
+        display:flex;
+        justify-content: center;
+        color:#FFF;
+        font-family:RaleWay;
+        font-size:20px;
+    }
+    #moldura h1{
+        font-family:RaleWay;
+        text-align:center;
+        margin-top:2%;
+        font-size:60px;
+        color:#FFF;
+    }
+    
+}
