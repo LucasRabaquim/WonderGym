@@ -1,0 +1,148 @@
+
+@font-face {
+    font-family: RaleWay;
+    src: url('/font/Raleway/Raleway-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Poppins;
+    src: url('/font/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('/font/Poppins/Poppins-Bold.ttf');
+}
+
+#titulo h2{
+    font-family: RaleWay;
+    color: #FFFFFF;
+    font-size:250%;
+    
+    text-align: center;
+
+   
+}
+
+
+/* Estilização do plano 1 - Arlequina */
+.plano{
+    width: 330px;
+    height: 550px;
+    background-color:var(--cinza);
+    border-radius:40px;
+    color:var(--preto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top:3%;
+}
+.plano h2{
+    font-family: RaleWay;
+    color: #000;
+    font-size: 200%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px var(--preto);
+}
+.plano h1{
+    font-family: Poppins-Bold;
+    color: #000;
+    font-size: 300%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    text-shadow:1px 1px 2px var(--cinza);
+}
+.plano hr{
+    width: 70%;
+    margin-top:-0.5rem;
+    height: 0.5rem;
+    background: var(--preto);
+    border-radius: 100px;
+}
+.plano #icone img{
+    display: flex ;
+    justify-content:center;
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.plano #conteudo img{
+   margin-left:40px;
+   float:left;
+   padding-right:10px;
+ 
+}
+.plano #conteudo p{
+    font-family: Raleway;
+    position:relative;
+    font-size:larger;
+    font-weight:bold;
+    padding-bottom:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.plano input{
+    width:150px;
+    height: 50px;
+    background-color:var(--vermelho);
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius:15px;
+    color:#FFF;
+    font-family:RaleWay;
+    font-weight:bold;
+    font-size:large;
+    border: none;
+}
+.plano input:hover{
+    color: #FFF;
+    background-color:var(--azul);
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+
+.div-planos{
+    justify-content: space-evenly;
+}
+.div-planos div{
+    color:var(--preto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteudo-planos div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0.5rem;
+}
+.conteudo-planos div p{
+    color: var(--preto);
+}
+
+#plano-maravilha{
+background-color: var(--preto);
+}
+#plano-maravilha h2{
+    color: var(--amarelo);
+    text-shadow:1px 1px 2px var(--amarelo);
+}
+#plano-maravilha h1{
+    color: #FFF;
+    text-shadow:1px 1px 2px var(--cinza);
+}
+#plano-maravilha div p{color: #fff;}
+#plano-maravilha hr{background-color: var(--amarelo);}
+#plano-maravilha input{background-color: var(--amarelo);}
+#plano-maravilha input:hover{
+    color: #FFBD59;
+    background-color:rgb(17, 17, 17);
+    transition: 0.4s;
+    transform: scale(1.1);
+}
