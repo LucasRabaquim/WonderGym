@@ -1,0 +1,87 @@
+@media (max-width: 768px)
+{
+  .background-image
+   {
+    display: none;
+   }
+
+   .navbar .nav-item{
+    display: none;
+   }
+   .navbar ul{
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    margin:0;
+   }
+   #home-text{
+    width: 100%;
+    margin-left: 0;
+   }
+   #form-imc{
+    width: 100%;
+    margin-left: 0;
+   }
+   .div-planos{
+    flex-direction: column;
+   }
+   .equipe-images{
+    flex-direction: column;
+   }
+   #moldura{
+    width: 100%;
+   }
+   .sobre-text{
+    font-size: 1.2rem;
+   }
+   #form-calc div, #form-contato{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.9rem;
+  }
+  #form-calc input{
+    width: 80%;
+  }
+  .form-input{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #form-contato{
+    border-radius: 0px;
+    align-items: center;
+    padding-top:5rem;
+  }
+  #form-contato input[type="submit"]{
+    width: 50%;
+  }
+  #form-contato textarea{
+    width: 60%;
+  }
+  #titulo-contato, #titulo-contato h1{
+    margin:0px;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  #titulo-contato img{
+    display: none;
+  }
+  #moldura, #moldura h1, .Formulario div{
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 520px)
+{
+  #home-text, #home-text h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+  .slides{
+    display: none;
+  }
+}

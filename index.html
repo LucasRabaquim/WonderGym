@@ -11,24 +11,29 @@
     <link rel="stylesheet" href="./css/modulo.css" />
     <link rel="stylesheet" href="./css/sobre.css" />
     <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/effects.css" />
+    <link rel="stylesheet" href="./css/mediaquery.css" />
 </head>
 
 <body>
-    <div class="background-image" id="background-home-imc">
-        <img src="./Images/Heroine/WonderWoman.png" alt="Mulher Maravilha">
-    </div>
-    <section id="#home">
-        <nav>
+    <section id="home">
+       
+        <div class="background-image" id="background-home-imc">
+            <img src="./Images/Heroine/WonderWoman.png" alt="Mulher Maravilha">
+        </div>
+        <nav class="navbar">
+            <input type="checkbox" style="display: none;" id="btnMenu" for="btnMenu"/>
             <ul class="flex row center">
                 <li id="item-nav-logo">
                     <img src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
+                    <label for="btnMenu" id="labelMenu">☰</label>
                 </li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#imc">Calculo IMC</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li class="item-nav-destaque" id="item-nav-planos"><a href="#planos">Nossos planos</a></li>
-                <li class="item-nav-destaque" id="item-nav-login"><a href="#login">Log in</a></li>
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#imc">Calculo IMC</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
+                <li class="nav-item item-nav-destaque" id="item-nav-planos"><a href="#planos">Nossos planos</a></li>
+                <li class="nav-item item-nav-destaque" id="item-nav-login"><a href="#login">Log in</a></li>
             </ul>
         </nav>
         <div id="home-text">
@@ -36,20 +41,19 @@
             Aqui seu <span class="d-ama">esforço</span><br>vale a <span class="d-verm">pena</span>!
         </div>
 
-        <div class="carrosel">
-            <div id="slide-area" class="flex row">
-                <div class="flex row">
-                    <img src="./Images/Placeholder.png" id="carrosel-img-01">
-                    <img src="./Images/Placeholder.png" id="carrosel-img-02">
-                </div>
-                <div class="flex row">
-                    <img src="./Images/Placeholder.png" id="carrosel-img-03">
-                    <img src="./Images/Placeholder.png" id="carrosel-img-04">
-                </div>
+        <div class="slides">
+            <div class="slide">
+                <img src="./Images/carrosel/img3.jpg" class="slideimage" width="890px">
+            </div>
+            <div class="slide-2">
+                <img src="./Images/carrosel/img4.jpg" class="slideimage" width="800px">
+            </div>
+            <div class="slide-3">
+                <img src="./Images/carrosel/img1.jpg" class="slideimage" width="800px">
             </div>
         </div>
     </section>
-    <section id="#imc">
+    <section id="imc">
         <div id="imc-text" class="d-ama">
             Calcule o seu IMC para identificar o melhor plano à sua saúde!
         </div>
@@ -251,13 +255,19 @@
                 <hr>
                 <div class="Formulario">
                     <form name="Cadastro" method="post">
+                        <div class="form-input">
                         <label for="Email">Email:
                             <input type="email" name="Email" required="required"></label><br>
-                        <label for="Senha">Senha:
-                            <input type="textbox" name="Senha" required="required"></label><br>
-                        <label for="manterLogado">
+                        </div>
+                            <div class="form-input">
+                            <label for="Senha">Senha:
+                            <input type="password" name="Senha" required="required"></label><br>
+                        </div>
+                            <div class="form-input">
+                            <label for="manterLogado">
                             <input type="checkbox" name="checkbox">
                             <p>Lembrar Login</p>
+                            </div>
                         </label>
 
                     </form>
