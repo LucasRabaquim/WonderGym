@@ -6,6 +6,9 @@
 .column{
     flex-direction: column;
 }
+.inline-block{
+    display: inline-block;
+}
 .text-center{
     text-align: center;
 }

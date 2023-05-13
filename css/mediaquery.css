@@ -5,9 +5,9 @@
     display: none;
    }
 
-   .navbar .nav-item{
+   /*.navbar .nav-item{
     display: none;
-   }
+   }*/
    .navbar ul{
     flex-direction: column;
     height: 90vh;
