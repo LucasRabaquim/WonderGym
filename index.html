@@ -17,16 +17,21 @@
 
 <body>
     <section id="home">
-       
         <div class="background-image" id="background-home-imc">
             <img src="./Images/Heroine/WonderWoman.png" alt="Mulher Maravilha">
         </div>
-        <nav class="navbar">
-            <input type="checkbox" style="display: none;" id="btnMenu" for="btnMenu"/>
-            <ul class="inline-flex center">
-                <li id="item-nav-logo">
-                    <img src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
-                    <label for="btnMenu" id="labelMenu">☰</label>
+        <nav class="navbar flex row">
+
+            
+
+            <div class="nav-header">
+                    <img id="logo" src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
+                    <label for="btnMenu" id="labelMenu">☰</label>             
+            </div>
+            <input type="checkbox" style="display:none;" id="btnMenu" for="btnMenu" />
+            <ul id="menuHamburguer" class="inline-flex center">
+                <li class="nav-item flex row">
+                    <img id="logo" src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
                 </li>
                 <li class="nav-item"><a href="#home">Home</a></li>
                 <li class="nav-item"><a href="#imc">Calculo IMC</a></li>
@@ -256,18 +261,18 @@
                 <div class="Formulario">
                     <form name="Cadastro" method="post">
                         <div class="form-input">
-                        <label for="Email">Email:
-                            <input type="email" name="Email" required="required"></label><br>
+                            <label for="Email">Email:
+                                <input type="email" name="Email" required="required"></label><br>
                         </div>
-                            <div class="form-input">
+                        <div class="form-input">
                             <label for="Senha">Senha:
-                            <input type="password" name="Senha" required="required"></label><br>
+                                <input type="password" name="Senha" required="required"></label><br>
                         </div>
-                            <div class="form-input">
+                        <div class="form-input">
                             <label for="manterLogado">
-                            <input type="checkbox" name="checkbox">
-                            <p>Lembrar Login</p>
-                            </div>
+                                <input type="checkbox" name="checkbox">
+                                <p>Lembrar Login</p>
+                        </div>
                         </label>
 
                     </form>
