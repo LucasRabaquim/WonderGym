@@ -46,6 +46,8 @@
 .Formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .Formulario div {
@@ -55,11 +57,10 @@
 .Formulario form label {
     font-size: 2rem;
     display: flex;
-    justify-content: center;
     color: #FFF;
     font-family: RaleWay;
     font-size: 30px;
-
+    width: auto;
 }
 
 .Formulario form input {
@@ -68,7 +69,7 @@
     border-radius: 5px;
     font-size: 2rem;
     width: 70%;
-    margin-left: 2em;
+
     color: #FFF;
 }
 
@@ -92,6 +93,7 @@
 .Formulario input[type="checkbox"]{
     height: 1em;
 }
+.Formulario
 #botao input:hover {
     background-color: #FFF;
     color: #FFBD59;
@@ -127,40 +129,3 @@ footer img {
 }
 
 
-@media screen and (max-width: 480px) {
-
-    #rodape p {
-        font-family: RaleWay;
-        font-size: 15px;
-        color: #FFF;
-        padding-top: 50px;
-        display: inline-block;
-        margin-left: 2%;
-    }
-
-    #rodape img {
-        display: flex;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1em;
-    }
-
-    .Formulario form label {
-
-        display: flex;
-        justify-content: center;
-        color: #FFF;
-        font-family: RaleWay;
-        font-size: 20px;
-    }
-
-    #moldura h1 {
-        font-family: RaleWay;
-        text-align: center;
-        margin-top: 2%;
-        font-size: 60px;
-        color: #FFF;
-    }
-
-}

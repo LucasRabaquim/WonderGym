@@ -201,7 +201,7 @@
     <section id="contato" class="flex column center">
         <h1 id="equipe-titulo">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
         <div class="flex row equipe-images">
-            <div class="text-center"><a href=""></a><img src="./Images/equipe/Ale.png" alt=""></a><br>Alexandre</div>
+            <div class="text-center"><a href="https://www.linkedin.com/in/alexandre-lima-482983253/"></a><img src="./Images/equipe/Ale.png" alt=""></a><br>Alexandre</div>
             <div class="text-center"><a href=""></a><img src="./Images/equipe/Laur.png" alt=""></a><br>Gustavo</div>
             <div class="text-center"><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img
                         src="./Images/equipe/Lucas.png" alt=""></a><br>Lucas</div>
@@ -224,7 +224,7 @@
                 <h2>Deixe sua mensagem:</h2>
                 <textarea name="mensagem" id="txt-contato" cols="30" rows="10" required="required"></textarea>
             </div>
-            <input id="contato-submit" class="form-enviar" type="submit" value="Enviar">
+            <input id="contato-submit" class="form-enviar animacao-botao-type2" type="submit" value="Enviar">
         </form>
     </section>
 
@@ -258,24 +258,22 @@
                 <div class="Formulario">
                     <form name="Cadastro" method="post">
                         <div class="form-input">
-                            <label for="Email">Email:
-                                <input type="email" name="Email" required="required"></label><br>
+                            <label for="Email">Email:</label>
+                                <input type="email" name="Email" required="required">
                         </div>
                         <div class="form-input">
-                            <label for="Senha">Senha:
-                                <input type="password" name="Senha" required="required"></label><br>
+                            <label for="Senha">Senha:</label>
+                                <input type="password" name="Senha" required="required">
                         </div>
                         <div class="form-input">
-                            <label for="manterLogado">
-                                <input type="checkbox" name="checkbox" id="manterLogado">
-                            Lembrar Login</label>
+                            <input type="checkbox" name="checkbox" id="manterLogado">
+                            <label for="manterLogado"> Lembrar Login</label>
                         </div>
                         </label>
-
                     </form>
                 </div>
                 <div id="botao">
-                    <input type="button" name="Entrar" value="Entrar" onCLick="Entrar()">
+                    <input type="button" name="Entrar" value="Entrar" class="animacao-botao" onCLick="Entrar()">
                 </div>
     </section>
 

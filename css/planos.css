@@ -110,6 +110,7 @@
 
 .div-planos{
     justify-content: space-evenly;
+    padding: 5em 0 5em 0;
 }
 .div-planos div{
     color:var(--preto);

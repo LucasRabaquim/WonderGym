@@ -132,3 +132,32 @@
   }
 
 }
+
+@media screen and (max-width: 480px) {
+
+  #rodape p {
+      font-family: RaleWay;
+      font-size: 15px;
+      color: #FFF;
+      padding-top: 50px;
+      display: inline-block;
+      margin-left: 2%;
+  }
+  .Formulario form label {
+
+      display: flex;
+      justify-content: center;
+      color: #FFF;
+      font-family: RaleWay;
+      font-size: 20px;
+  }
+
+  #moldura h1 {
+      font-family: RaleWay;
+      text-align: center;
+      margin-top: 2%;
+      font-size: 60px;
+      color: #FFF;
+  }
+
+}
