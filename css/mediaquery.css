@@ -9,6 +9,7 @@
     width: 100%;
     margin: 0;
   }
+
   .nav-header{
     z-index: 7;
   }
@@ -24,11 +25,11 @@
   }
 
   .div-planos {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .equipe-images {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   #moldura {
@@ -42,7 +43,6 @@
   #form-calc div,
   #form-contato {
     display: flex;
-
     flex-direction: column;
     align-items: center;
     font-size: 1.9rem;

@@ -1,0 +1,89 @@
+#equipe-titulo {
+    margin-top: 1.5em;
+    font-size: 3.5rem;
+    margin-bottom: 2em;
+}
+
+.equipe-images {
+    width: 100%;
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+
+.equipe-images div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipe-images div img {
+    border-radius: 100em;
+}
+
+#form-contato {
+    margin-top: 13em;
+    width: 100%;
+    height: auto;
+    background-color: var(--vermelho);
+    border-radius: 5em;
+    align-items: center;
+}
+
+#titulo-contato {
+    margin: 5em 0 13em 0;
+}
+
+#titulo-contato h1 {
+    font-size: 4rem;
+    margin-left: 5em;
+}
+
+#titulo-contato img {
+    position: absolute;
+    left: 0px;
+    translate: 1em -16em;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.form-input input {
+    width: 50%;
+    color: var(--preto);
+}
+
+#msg-area {
+    text-align: center;
+    width: 100%;
+}
+
+#msg-area h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#msg-area textarea {
+    resize: none;
+    width: 35%;
+    color: var(--preto);
+}
+
+.form-enviar {
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 99em;
+    border-style: none;
+}
+
+#contato-submit {
+    background-color: var(--preto);
+    width: 20%;
+    margin: 3rem 0 2rem 0;
+}

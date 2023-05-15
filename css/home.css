@@ -1,0 +1,86 @@
+.background-image {
+    position: absolute;
+    z-index: -10;
+    right: 0px;
+}
+
+#background-home-imc {
+    right: -10em;
+    width: 60%;
+    background-image: url("../Images/WallPaperBlob.svg");
+    background-size: cover;
+    height: 2000px;
+}
+
+#background-home-imc img {
+    width: 60%;
+    translate: 8em;
+}
+
+.navbar ul {
+    width: 70%;
+    height: 10em;
+    font-size: 1em;
+    justify-content: space-around;
+}
+
+#logo{height: 8em;}
+
+.nav-header #logo{ display: none; }
+
+.nav-header {
+    top: 8em;
+    height: 7em;
+    width: 100%;
+}
+
+#labelMenu {
+    font-size: 5em;
+    margin-left: 1em;
+    display:none;
+}
+
+#menuHamburguer{
+    z-index:5;
+    transition:0.5s;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    left:0vw;
+    padding-top:0px;
+}
+
+
+.item-nav-destaque {
+    padding: 0.7em;
+    border-radius: 5em;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.item-nav-destaque a {
+    color: var(--preto);
+    font-weight: bold;
+}
+
+.item-nav-destaque:hover { background-color: #fff;}
+
+#item-nav-planos { background-color: var(--vermelho);}
+
+#item-nav-login { background-color: var(--amarelo);}
+
+#home-text {
+    width: 55%;
+    font-size: 3.7em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#home-text h1 {
+    font-size: 6.5rem;
+    font-weight: 500;
+}
+
+.d-verm { color: var(--vermelho);}
+
+.d-ama { color: var(--amarelo);}

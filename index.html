@@ -7,35 +7,40 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
     <title>Wonder Gym</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/imc.css" />
+    <link rel="stylesheet" href="./css/contato.css" />
     <link rel="stylesheet" href="./css/planos.css" />
-    <link rel="stylesheet" href="./css/modulo.css" />
     <link rel="stylesheet" href="./css/sobre.css" />
     <link rel="stylesheet" href="./css/login.css" />
     <link rel="stylesheet" href="./css/effects.css" />
     <link rel="stylesheet" href="./css/mediaquery.css" />
+    <link rel="stylesheet" href="./css/modulo.css" />
 </head>
 
 <body>
+
+
     <section id="home">
         <div class="background-image" id="background-home-imc">
             <img src="./Images/Heroine/WonderWoman.png" alt="Mulher Maravilha">
         </div>
         <nav class="navbar flex row">
-            <div class="nav-header">
-                    <img id="logo" src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
-                    <label for="btnMenu" id="labelMenu">☰</label>             
+            <div class="nav-header flex justify-center">
+                <img id="logo" src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
+                <label for="btnMenu" id="labelMenu">☰</label>
             </div>
-            <input type="checkbox" style="display:none;" id="btnMenu" for="btnMenu" />
-            <ul id="menuHamburguer" class="inline-flex center animacao-botao">
+            <input type="checkbox" checked style="display:none;" id="btnMenu" />
+            <ul id="menuHamburguer" class="inline-flex align-center animacao-botao">
                 <li class="nav-item flex row">
                     <img id="logo" src="./Images/WonderGymLogo.png" alt="Logo da WonderGym">
                 </li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#imc">Calculo IMC</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li class="item-nav-destaque" id="item-nav-planos"><a href="#planos">Nossos planos</a></li>
-                <li class="item-nav-destaque" id="item-nav-login"><a href="#login">Log in</a></li>
+                <li><a class="item-nav" href="#home">Home</a></li>
+                <li><a class="item-nav" href="#imc">Calculo IMC</a></li>
+                <li><a class="item-nav" href="#contato">Contato</a></li>
+                <li><a class="item-nav" href="#sobre">Sobre Nós</a></li>
+                <li class="item-nav item-nav-destaque" id="item-nav-planos"><a href="#planos">Nossos planos</a></li>
+                <li class="item-nav item-nav-destaque" id="item-nav-login"><a href="#login">Log in</a></li>
             </ul>
         </nav>
         <div id="home-text">
@@ -55,12 +60,14 @@
             </div>
         </div>
     </section>
+
+
     <section id="imc">
         <div id="imc-text" class="d-ama">
             Calcule o seu IMC para identificar o melhor plano à sua saúde!
         </div>
         <div id="form-imc">
-            <div id="form-calc" class="flex column center">
+            <div id="form-calc" class="flex column align-center">
                 <div>
                     <h1 class="text-center">IMC
                         <hr />
@@ -77,18 +84,24 @@
                     <div class="input-error" id="input-peso-msg">O Peso não pode estar vazio</div>
                 </div>
                 <div>
-                    <label for="">Sexo: </label>
-                    <label for="rdFeminino">
-                        <input type="radio" name="rdSexo" id="rdFeminino">
-                        Feminino</label>
-                    <label for="rdMasculino">
-                        <input type="radio" name="rdSexo" id="rdMasculino">
-                        Masculino</label>
+                    <div>
+                        <label for="">Sexo: </label>
+                    </div>
+                    <div class="rd-sexo flex row align-center">
+                        <label for="rdFeminino">
+                            <input type="radio" name="rdSexo" id="rdFeminino">
+                            Feminino</label>
+                    </div>
+                    <div class="rd-sexo flex row align-center">
+                        <label for="rdMasculino">
+                            <input type="radio" name="rdSexo" id="rdMasculino">
+                            Masculino</label>
+                    </div>
                     <div class="input-error" id="input-sexo-msg">Selecione algum sexo</div>
                 </div>
                 <div><input type="submit" value="Calcular" id="btnIMC"></div>
             </div>
-            <div id="form-result" class="flex column center">
+            <div id="form-result" class="flex column align-center">
                 <div>
                     <h1 id="result-imc"></h1>
                 </div>
@@ -106,10 +119,7 @@
         <div id="titulo">
             <h2>Conheça nossos <b class="d-ama">Planos</b></h2>
         </div>
-
-
-
-        <div class="container div-planos flex row center w-100">
+        <div class="container div-planos flex row align-center w-100">
 
             <div class="plano">
                 <h2>Plano BatGirl</h2>
@@ -118,7 +128,6 @@
                 <div id="icone">
                     <img src="./Images/planos/BatGirl - Icone.png">
                 </div>
-
                 <div class="conteudo-planos">
                     <div>
                         <img src="./Images/planos/Ellipse 1.png">
@@ -135,7 +144,6 @@
                 </div>
                 <br>
                 <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
-
             </div>
 
             <div class="plano">
@@ -161,7 +169,6 @@
                 </div>
                 <br>
                 <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
-
             </div>
 
             <div class="plano" id="plano-maravilha">
@@ -171,7 +178,6 @@
                 <div id="icone">
                     <img src="./Images/planos/MulherMaravilha - Icone.png">
                 </div>
-
                 <div class="conteudo-planos">
                     <div>
                         <img src="./Images/planos/Ellipse 1.png">
@@ -188,23 +194,29 @@
                 </div>
                 <br>
                 <input type="button" id="btnAssinar" name="btnAssinar" value="Assinar" onClick="Assinar()">
-
             </div>
-
-
-
-
         </div>
     </section>
 
 
-    <section id="contato" class="flex column center">
+    <section id="contato" class="flex column align-center">
         <h1 id="equipe-titulo">Entre em contato com a <span class="d-verm">equipe da WG</span></h1>
         <div class="flex row equipe-images">
-            <div class="text-center"><a href="https://www.linkedin.com/in/alexandre-lima-482983253/"></a><img src="./Images/equipe/Ale.png" alt=""></a><br>Alexandre</div>
-            <div class="text-center"><a href=""></a><img src="./Images/equipe/Laur.png" alt=""></a><br>Gustavo</div>
-            <div class="text-center"><a href="https://www.linkedin.com/in/lucas-rabaquim/"><img
-                        src="./Images/equipe/Lucas.png" alt=""></a><br>Lucas</div>
+            <div class="text-center">
+                <a href="https://www.linkedin.com/in/alexandre-lima-482983253/">
+                    <img src="./Images/equipe/Ale.png" alt="">
+                </a><br>Alexandre
+            </div>
+            <div class="text-center">
+                <a href=""></a>
+                <img src="./Images/equipe/Laur.png" alt="">
+                </a><br>Gustavo
+            </div>
+            <div class="text-center">
+                <a href="https://www.linkedin.com/in/lucas-rabaquim/">
+                    <img src="./Images/equipe/Lucas.png" alt="">
+                </a><br>Lucas
+            </div>
         </div>
 
         <form id="form-contato" class="flex column" action="./index.html" method="get">
@@ -212,14 +224,18 @@
                 <img src="./Images/Heroine/superGirl.png" alt="Imagem da Super-Girl">
                 <h1>Como podemos te <span class="d-ama">ajudar</span>?</h1>
             </div>
-
-            <div class="form-input"><label for="inputNome">Nome: </label><input type="text" name="nome" id="inputNome"
-                    required="required"></div>
-            <div class="form-input"><label for="inputEmailContato">Email: </label><input type="email"
-                    name="emailContato" id="inputEmailContato" required="required"></div>
-            <div class="form-input"><label for="inputCelular">Celular: </label><input type="tel" name="celular"
-                    id="inputCelular" required="required"></div>
-
+            <div class="form-input">
+                <label for="inputNome">Nome: </label>
+                <input type="text" name="nome" id="inputNome" required="required">
+            </div>
+            <div class="form-input">
+                <label for="inputEmailContato">Email: </label>
+                <input type="email" name="emailContato" id="inputEmailContato" required="required">
+            </div>
+            <div class="form-input">
+                <label for="inputCelular">Celular: </label>
+                <input type="tel" name="celular" id="inputCelular" required="required">
+            </div>
             <div id="msg-area">
                 <h2>Deixe sua mensagem:</h2>
                 <textarea name="mensagem" id="txt-contato" cols="30" rows="10" required="required"></textarea>
@@ -227,7 +243,6 @@
             <input id="contato-submit" class="form-enviar animacao-botao-type2" type="submit" value="Enviar">
         </form>
     </section>
-
 
 
     <section id="sobre" class="flex column">
@@ -259,22 +274,23 @@
                     <form name="Cadastro" method="post">
                         <div class="form-input">
                             <label for="Email">Email:</label>
-                                <input type="email" name="Email" required="required">
+                            <input type="email" name="Email" required="required">
                         </div>
                         <div class="form-input">
                             <label for="Senha">Senha:</label>
-                                <input type="password" name="Senha" required="required">
+                            <input type="password" name="Senha" required="required">
                         </div>
                         <div class="form-input">
                             <input type="checkbox" name="checkbox" id="manterLogado">
                             <label for="manterLogado"> Lembrar Login</label>
                         </div>
-                        </label>
+
                     </form>
                 </div>
                 <div id="botao">
                     <input type="button" name="Entrar" value="Entrar" class="animacao-botao" onCLick="Entrar()">
                 </div>
+        </div>
     </section>
 
 

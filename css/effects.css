@@ -1,6 +1,5 @@
 .carrosel {
     width: 55em;
-
     margin-left: 2em;
     position: relative;
 }
@@ -71,7 +70,6 @@
 #form-imc input[type="submit"]:hover {
     background-color: var(--vermelho);
     color: #fff;
-    padding: 1em;
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
     font-size: 0.6em;
     font-weight: bold;
