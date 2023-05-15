@@ -89,7 +89,9 @@
     font-weight: bolder;
     color: #FFF;
 }
-
+.Formulario input[type="checkbox"]{
+    height: 1em;
+}
 #botao input:hover {
     background-color: #FFF;
     color: #FFBD59;

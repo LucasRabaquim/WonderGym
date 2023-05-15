@@ -53,3 +53,12 @@
     40%{opacity: 0;}
 }
 /*    filter: opacity(0.6) drop-shadow(0 0 0 var(--vermelho));*/
+
+
+.animacao-botao li:hover {
+    filter: brightness(2);
+    padding: 1em;
+    border-radius: 99em;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
+    color: black;
+}
